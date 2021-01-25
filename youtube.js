@@ -1,4 +1,4 @@
-productive = ["math", "chemistry"];
+productive = ["math 12", "how to", "math video", "learning", "chemistry"];
 
 
 setInterval(function(){ //Home page
