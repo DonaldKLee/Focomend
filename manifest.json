@@ -1,0 +1,12 @@
+{
+    "name": "Noccomend: Remove your YouTube recommendations",
+    "description" : "A Chrome Extension that removes YouTube recommendations",
+    "short_name": "Noccomend",
+    "version": "1.0",
+    "permissions": ["activeTab", "declarativeContent", "<all_urls>"],
+    "manifest_version": 2,
+    "browser_action": {
+      "default_popup": "hello.html",
+      "default_icon": "hello_extensions.png"
+    }
+  }

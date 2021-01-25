@@ -1,0 +1,41 @@
+html {
+    display: block;
+    width:300px;
+    height:auto;
+    background:#333333;
+    margin:0px;
+    padding:0px;
+}
+.intro {
+    font-size: 2em;
+    color:white;
+    padding: 0px 0px 15px 15px;
+}
+.hide_r_btn {
+    position: relative;
+    display: block;
+    border-radius: 40px;
+    top:10px;
+    background:red;
+    outline:none;
+    border:none;
+    color:white;
+    padding:15px;
+    transition:0.3s;
+    text-align: center;
+    margin:0 auto;
+    cursor: pointer;
+    margin-bottom: 40px;
+
+}
+
+.hide_r_btn:hover {
+    background:#009BFF;
+    color:white;
+}
+
+.author {
+    color:white;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
