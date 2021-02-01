@@ -16,9 +16,9 @@ html {
     display: block;
     border-radius: 40px;
     top:10px;
-    background:red;
+    background: transparent;
     outline:none;
-    border:none;
+    border: solid red 2px;
     color:white;
     padding:15px;
     transition:0.3s;
@@ -30,8 +30,10 @@ html {
 }
 
 .hide_r_btn:hover {
-    background:#009BFF;
+    background:red;
     color:white;
+    outline:none;
+    border: solid red 2px;
 }
 
 .author {
