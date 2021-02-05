@@ -1,7 +1,6 @@
 productive = ["math 12", "how to", "math video", "learning", "chemistry"];
 
-
-setInterval(function(){ //Home page
+function hide_videos(){ //Home page
     var home_videos = document.getElementsByClassName("ytd-rich-grid-renderer");
     if (home_videos.length > 0) {
         // elements with that class exist
@@ -22,7 +21,6 @@ setInterval(function(){ //Home page
             }
             else {
                 home_videos[i].style.display = "none";
-                //home_videos[i].style.filter = "blur(40px)";
             }
         } 
     }
@@ -45,7 +43,6 @@ setInterval(function(){ //Home page
             }
             else {
                 side_videos[i].style.display = "none";
-                //side_videos[i].style.filter = "blur(40px)";
             }
         } 
     }
@@ -68,8 +65,15 @@ setInterval(function(){ //Home page
             }
             else {
                 search_videos[i].style.display = "none";
-                //search_videos[i].style.filter = "blur(40px)";
             }
         }
     }
-}, 1000);
+}
+
+if (state==1) {
+    var hide_video_var = setInterval(hide_videos, 1000);
+}
+
+else {
+    clearInterval(hide_video_var);
+}
