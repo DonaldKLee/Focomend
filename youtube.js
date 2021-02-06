@@ -4,6 +4,7 @@ function hide_videos(){ //Home page
     var home_videos = document.getElementsByClassName("ytd-rich-grid-renderer");
     var side_videos = document.getElementsByClassName("ytd-compact-video-renderer");
     var search_videos = document.getElementsByClassName("ytd-item-section-renderer");
+    
     if (undo=="no") {
         if (home_videos.length > 0) {
             // elements with that class exist
@@ -75,21 +76,21 @@ function hide_videos(){ //Home page
 
 function undo() {
     var home_videos = document.getElementsByClassName("ytd-rich-grid-renderer");
+    var side_videos = document.getElementsByClassName("ytd-compact-video-renderer");
+    var search_videos = document.getElementsByClassName("ytd-item-section-renderer");
     if (home_videos.length > 0) {
         // elements with that class exist
         for (var i = 0; i < home_videos.length; i++) {
             home_videos[i].style.pointerEvents = "auto";
-            home_videos[i].style.display = "block";
+            home_videos[i].style.display = "";
             }
     }
-    var side_videos = document.getElementsByClassName("ytd-compact-video-renderer");
     if (side_videos.length > 0) {
         for (var i = 0; i < side_videos.length; i++) {
             side_videos[i].style.pointerEvents = "auto";
             side_videos[i].style.display = "block";
         } 
     }
-    var search_videos = document.getElementsByClassName("ytd-item-section-renderer");
     if (search_videos.length > 0) {
         for (var i = 0; i < search_videos.length; i++) {
             search_videos[i].style.pointerEvents = "auto";
@@ -99,11 +100,23 @@ function undo() {
 }
 
 if (state==1) {
+    var state=1;
+}
+else if (state==0) {
+    var state=0;
+}
+else {
+    state = localStorage.getItem('noccomend_state')
+}
+
+if (state==0) { //Hide videos
+    localStorage.setItem('noccomend_state', '0')
     var undo = "no";
     var hide_video_var = setInterval(hide_videos, 1000);
 }
 
-else {
+else { //Do not hide videos
+    localStorage.setItem('noccomend_state', '1')
     undo();
     var undo = "yes";
     clearInterval(hide_video_var);

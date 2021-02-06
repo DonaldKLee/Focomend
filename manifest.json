@@ -1,12 +1,20 @@
 {
-    "name": "Noccomend: Remove your YouTube recommendations",
-    "description" : "A Chrome Extension that removes YouTube recommendations",
-    "short_name": "Noccomend",
+    "name": "Focomend: Filter your YouTube recommendations",
+    "description" : "Filter your YouTube reccomendations and hide comments to prevents distractions and help you stay on track when watching YouTube.",
+    "short_name": "Focomend",
     "version": "1.0",
     "permissions": ["activeTab", "declarativeContent", "<all_urls>"],
     "manifest_version": 2,
+    "content_scripts": [
+      {
+        "matches": [
+          "https://www.youtube.com/*"
+        ],
+        "js": ["youtube.js"]
+      }
+    ],
     "browser_action": {
-      "default_popup": "hello.html",
+      "default_popup": "popup.html",
       "default_icon": "logo256.png"
     },
     "icons": { "16": "logo16.png",

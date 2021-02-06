@@ -1,4 +1,4 @@
-# Focomend
-Focomend is a Chrome Extension that filters out your YouTube reccomendations and hide comments! This prevents distractions and helps you stay on track when watching YouTube. 
+# Noccommend
+Noccomend is a Chrome Extension that removes reccomendations and comments from YouTube! This prevents distractions when studying. However, this does not remove educational videos.
 
 More features coming soon!
