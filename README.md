@@ -4,6 +4,7 @@ By: Donald Lee
 Date: February 6th 2021
 
 Focomend is a Chrome Extension that filters out your YouTube reccomendations and hide comments! This prevents distractions and helps you stay on track when watching YouTube. 
+Note: Because this extension scans through all YouTube videos loaded by the browser, although this is uncommon, you may experience some lag on YouTube.
 
 # Installation and Set up
 1. Download the code onto your computer
@@ -21,9 +22,6 @@ Focomend is a Chrome Extension that filters out your YouTube reccomendations and
 2. Click on "Hide recommendations!" to filter out your YouTube reccomendations based on keywords
 3. To turn off the extension, click on the Focomend logo again (Should be to the right of your search bar), and click on "Allow recommendations!"
 4. To modify your filters, repeat step 2 in the Installation and Set up section, then head over to Chrome, go to Settings -- > Extensions --> Next to Focomend, click on the reload button
-
-# Note
-Because this extension scans through all YouTube videos loaded by the browser, you may encounter some lag on YouTube.
 
 ## Terms of Service 
 This program has not been thoroughly tested on other devices. 
