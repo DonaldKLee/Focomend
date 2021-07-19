@@ -1,4 +1,4 @@
-productive = ["math 12", "how to", "math video", "learning", "chemistry"];
+keywords = ["math", "khan academy", "physics", "chemistry", "resume", "job", "application"];
 
 function hide_videos(){ //Home page
     var home_videos = document.getElementsByClassName("ytd-rich-grid-renderer");
@@ -10,8 +10,8 @@ function hide_videos(){ //Home page
             // elements with that class exist
             for (var i = 0; i < home_videos.length; i++) {
                 home_videos[i].style.pointerEvents = "none"; //Makes video non clickable (Until it is determined that it has a keyword)
-                for (var words = 0; words < productive.length; words++) {
-                    if (home_videos[i].innerHTML.indexOf(productive[words]) > -1) {
+                for (var words = 0; words < keywords.length; words++) {
+                    if (home_videos[i].innerHTML.toLowerCase().indexOf(keywords[words].toLowerCase()) > -1) {
                         productivity = true;
                         break
                     }
@@ -31,8 +31,8 @@ function hide_videos(){ //Home page
         if (side_videos.length > 0) {
             for (var i = 0; i < side_videos.length; i++) {
                 side_videos[i].style.pointerEvents = "none"; //Makes video non clickable (Until it is determined that it has a keyword)
-                for (var words = 0; words < productive.length; words++) {
-                    if (side_videos[i].innerHTML.indexOf(productive[words]) > -1) {
+                for (var words = 0; words < keywords.length; words++) {
+                    if (side_videos[i].innerHTML.toLowerCase().indexOf(keywords[words].toLowerCase()) > -1) {
                         productivity = true;
                         break
                     }
@@ -52,8 +52,8 @@ function hide_videos(){ //Home page
         if (search_videos.length > 0) {
             for (var i = 0; i < search_videos.length; i++) {
                 search_videos[i].style.pointerEvents = "none";
-                for (var words = 0; words < productive.length; words++) {
-                    if (search_videos[i].innerHTML.indexOf(productive[words]) > -1) {
+                for (var words = 0; words < keywords.length; words++) {
+                    if (search_videos[i].innerHTML.toLowerCase().indexOf(keywords[words].toLowerCase()) > -1) {
                         productivity = true;
                         break
                     }
@@ -106,17 +106,17 @@ else if (state==0) {
     var state=0;
 }
 else {
-    state = localStorage.getItem('noccomend_state')
+    state = localStorage.getItem('focomend_state')
 }
 
 if (state==0) { //Hide videos
-    localStorage.setItem('noccomend_state', '0')
+    localStorage.setItem('focomend_state', '0')
     var undo = "no";
     var hide_video_var = setInterval(hide_videos, 1000);
 }
 
 else { //Do not hide videos
-    localStorage.setItem('noccomend_state', '1')
+    localStorage.setItem('focomend_state', '1')
     undo();
     var undo = "yes";
     clearInterval(hide_video_var);
