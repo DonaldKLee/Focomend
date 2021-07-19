@@ -4,6 +4,7 @@ By: Donald Lee
 Date: February 6th 2021
 
 Focomend is a Chrome Extension that filters out your YouTube reccomendations and hide comments! This prevents distractions and helps you stay on track when watching YouTube. 
+
 Note: Because this extension scans through all YouTube videos loaded by the browser, although this is uncommon, you may experience some lag on YouTube.
 
 # Installation and Set up
